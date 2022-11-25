@@ -1,4 +1,8 @@
 @charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
 
 .flex__item  {
     width: 100%;
@@ -6,7 +10,7 @@
 
 .practice__card {
     width: 90%;
-    margin: 30px auto;
+    margin: 0 auto;
     box-shadow: 2px 2px 10px rgb(48, 47, 47);
 }
 
@@ -25,19 +29,43 @@ img {
     color: white;
     background-color: rgb(8, 126, 141);
     padding: 7px 10px;
+    margin-bottom: 16px;
 }
 
 .tag {
    width: 100%;
-   text-align: right;
-   display: flex;
+   text-align-last: right;
+   margin-top: 8px;
+   padding-bottom: 10px;
 }
 
 .card__tag {
    color: rgb(8, 126, 141);
+   display: inline-block;
 }
 
 .card__date {
     color: rgb(131, 126, 126,.7);
     margin-left: 12px;
+    display: inline-block;
 }
+
+@media (min-width: 760px) {
+    .flex__item {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    .practice__card {
+        width: 45%;
+        margin-bottom: 56px;
+    }
+
+     .practice__card:last-child {
+        
+     }
+}
+
